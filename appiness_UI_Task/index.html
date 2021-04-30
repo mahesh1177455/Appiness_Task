@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enroll N Pro</title>
-  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
-  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+  <title>Appiness</title>
+  <meta name="description" content="appiness">
+  <meta name="keywords" content="appiness">
 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css">
@@ -18,11 +18,6 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
-
-
-
-
 
 </head>
 
@@ -47,16 +42,16 @@
         <form class="Enquire_form" method="post" action="" role="form">
           <p>Enquire now</p>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name" name="fname" required="required" />
+            <input type="text" class="form-control" placeholder="Name" id="name" name="fname" required="required" />
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email ID" required="required" />
+            <input type="email" class="form-control" placeholder="Email ID" id="email" required="required" />
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Phone number" required="required" />
+            <input type="text" class="form-control" placeholder="Phone number" id="number" required="required" />
           </div>
           <div class="form-group">
-            <textarea class="form-control" rows="3" placeholder="Your Message" required="required"></textarea>
+            <textarea class="form-control" rows="3" placeholder="Your Message" id="message" required="required"></textarea>
           </div>
           <div class="checkbox">
             <label style="margin: 20px 5px;float: left;"><input type="checkbox" style="height: 14px;"> Im not a robot</label>
@@ -580,4 +575,25 @@
 $("#toTop").click(function () {
    $("html, body").animate({scrollTop: 0}, 1000);
 });
+</script>
+
+
+<script type="text/javascript">
+
+
+    $('#submited').click(function () {
+        var Fname = $('#name').val();
+        var no = $('#number').val();
+        var Email = $('#email').val();
+        var Message = $('#message').val();
+        
+        if (Fname != "" && no != "" && Email != "" && Message != "") {
+                            alert("Your message has been sent");
+                        }
+                        else {
+                            alert("Please Enter Required Fields");
+                        }
+    });
+
+
 </script>
